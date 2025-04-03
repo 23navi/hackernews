@@ -1,6 +1,6 @@
 
 {
-  "_comment": "This is the comment: So this compilerOptions can be found at bun page, they give suggestions for this ts config. Also we have added paths based on our requirements",
+  // "This is the comment: So this compilerOptions can be found at bun page, they give suggestions for this ts config.
   "compilerOptions": {
     // Environment setup & latest features
     "lib": ["ESNext"],
@@ -27,6 +27,7 @@
     "noUnusedParameters": false,
     "noPropertyAccessFromIndexSignature": false,
 
+    // Also we have added paths based on our requirements, this is relative to tsconfig.json, we can have different tsconfig nested inside some frontend folder and that can have it's own paths defined. 
     "paths":{
       "@/shared/*":["./shared/*"],
       "@/*":["./server/*"]
