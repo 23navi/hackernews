@@ -55,7 +55,14 @@ Drizzle documentation: (https://orm.drizzle.team/docs/get-started-postgresql)
 
 There are two drivers for postgres, we will be using postgres.js
 
+Step 1:
 ```
 bun add drizzle-orm postgres
 bun add -D drizzle-kit
 ```
+
+Step 2: 
+Then we need to create a drizzle config (drizzle.config.ts)
+
+Step 3: 
+Create the adapter to connect to db (server/adapter.ts)
