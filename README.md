@@ -19,6 +19,11 @@ We are using
 1. prettier: for making our code format in a standard way.
 2. @ianvs/prettier-plugin-sort-imports: for making our imports automatically sort in correct order.
 
+### Setting up .gitignore
+
+We can use the .gitingore for nodejs, there is a github repo with a recommended nodejs .gitignore
+(https://github.com/github/gitignore/blob/main/Node.gitignore)
+
 ### Prettier vs ESLint: What's the Difference?
 
 Both Prettier and ESLint are tools used in JavaScript and TypeScript development to improve code quality, but they serve different purposes
@@ -121,3 +126,7 @@ Step 3: Setup script for formatting in package.json
 --check : // This will only tell us all the changes which are required
 
 Note: If we have prettier plugin in vscode, it will check and write on it's own on save, so we don't have to manually run these scripts but it is good to have it and run on commit to maintain code style across team.
+
+### ESLint setup
+
+So we will have different ESLint config for both frontend and backend, so we will create ESLint setup in respected folders using `bun x`
