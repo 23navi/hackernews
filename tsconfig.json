@@ -3,7 +3,7 @@
   "compilerOptions": {
     // Environment setup & latest features
     "lib": ["ESNext"],
-    "target": "ESNext",
+    "target": "ESNext", // This will allow top level await, if we used target: commonjs, then we couldn't use top level await in our code (eg: ./server/adapter.ts)
     "module": "ESNext",
     "moduleDetection": "force",
     "jsx": "react-jsx",

@@ -48,3 +48,14 @@ export default [
   },
 ];
 ```
+
+### Setup Drizzle with postgress
+
+Drizzle documentation: (https://orm.drizzle.team/docs/get-started-postgresql)
+
+There are two drivers for postgres, we will be using postgres.js
+
+```
+bun add drizzle-orm postgres
+bun add -D drizzle-kit
+```

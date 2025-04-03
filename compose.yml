@@ -1,0 +1,51 @@
+## To run : > docker compose up -d || To stop: > docker compose down
+services:
+  db:
+    image: postgres:17
+    environment:
+      - POSTGRES_USER=user
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=hackernewsdb
+    volumes:
+      - postgres-data:/var/lib/postgressql/data
+    networks:
+      - hackernews-network
+    ports:
+      - "5432:5432"
+
+networks:
+  hackernews-network:
+    driver: bridge
+
+volumes:
+  postgres-data:
+# volumes:
+#   postgres-data: {}
+
+# vs
+
+# volumes:
+#   postgres-data:
+
+# What is the difference in yaml?
+
+# The difference between these two YAML definitions is subtle but important:
+
+# 1.
+# volumes:
+#   postgres-data: {}
+
+# This explicitly defines postgres-data as an empty object ({}), meaning it has no additional properties.
+
+# This is the recommended way to declare named Docker volumes in docker-compose.yml because it clearly specifies that postgres-data is a named volume.
+
+# 2.
+# volumes:
+#   postgres-data:
+
+# This is also valid YAML, but it implicitly assumes postgres-data is an empty mapping.
+
+# Some YAML parsers might interpret this as a null value instead of an empty object.
+
+# Which one should you use?
+# ✅ Recommended: Use {} because it explicitly declares an empty object, making the intent clearer and preventing possible misinterpretations.
