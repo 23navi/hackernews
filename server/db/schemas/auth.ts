@@ -6,6 +6,7 @@ export const userTable = pgTable("user", {
     password_hash: text("password_hash").notNull()
 });
 
+// Session table will store the session id and the associated user.
 export const sessionTable = pgTable("session", {
     id: text("id").primaryKey(),
     userId: text("user_id")
